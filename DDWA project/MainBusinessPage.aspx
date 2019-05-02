@@ -10,10 +10,6 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style3 {
-            height: 39px;
-            background-color: #CCCCFF;
-        }
         .auto-style30 {
             width: 1001px;
         }
@@ -23,14 +19,8 @@
         .auto-style39 {
             text-decoration: underline;
         }
-        .auto-style40 {
-            width: 1210px;
-            height: 26px;
-            text-align: center;
-            background-color: #FFFFFF;
-        }
         .auto-style106 {
-            text-align: justify;
+            text-align: left;
             height: 155px;
             background-color: #CCCCFF;
             width: 1210px;
@@ -42,7 +32,7 @@
             background-color: #CCCCFF;
         }
         .auto-style108 {
-            text-align: justify;
+            text-align: left;
             height: 140px;
             background-color: #CCCCFF;
         }
@@ -97,22 +87,20 @@
             height: 155px;
             background-color: #CCCCFF;
         }
-        .auto-style133 {
-            height: 26px;
-            background-color: #FFFFFF;
-        }
         .auto-style134 {
             text-align: justify;
             margin-left: 0px;
         }
-        .auto-style135 {
-            width: 2119px;
-            height: 26px;
-            background-color: #FFFFFF;
-        }
         .auto-style136 {
             width: 101%;
             height: 230px;
+        }
+        .auto-style137 {
+            text-align: left;
+        }
+        .auto-style138 {
+            text-decoration: underline;
+            text-align: left;
         }
     </style>
 </head>
@@ -124,13 +112,15 @@
             <asp:FormView ID="FormView1" runat="server" Height="1098px" Width="1634px" DataSourceID="SqlDataSource1" OnPageIndexChanging="FormView1_PageIndexChanging" AllowPaging="True">
                 <ItemTemplate>
                      <div class="Container-fluid">
-                    <table class="table auto-style1">
+                    <table class="table auto-style1" style="border-width: thick">
                         <tr>
                             <td class="auto-style30" rowspan="14">
                                 &nbsp;</td>
                             <td class="auto-style127">
                                 <asp:Image ID="Image1" runat="server" Height="60px" ImageUrl='<%# Eval("logo") %>' Width="63px" />
                             </td>
+                            <td class="auto-style127">&nbsp;</td>
+                            <td class="auto-style127">&nbsp;</td>
                             <td class="auto-style126" colspan="3">
                                 <h1 class="auto-style134">
                                     <asp:Label ID="BusinessName" runat="server" CssClass="auto-style39" Font-Bold="True" Font-Size="XX-Large" Font-Strikeout="False" Font-Underline="False" ForeColor="Black" style="" Text='<%# Eval("b_name") %>'></asp:Label>
@@ -139,12 +129,12 @@
                             <td class="auto-style38" rowspan="14">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td class="auto-style128" colspan="4">
+                            <td class="auto-style128" colspan="6">
                                 <asp:Image ID="Image2" runat="server" Height="505px" ImageAlign="Middle" ImageUrl='<%# Eval("image1") %>' Width="971px" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style121" colspan="2">
+                            <td class="auto-style121" colspan="4">
                                 <span class="auto-style39"><strong>Contact Details</strong></span><br />
                                 <table class="auto-style136">
                                     <tr>
@@ -208,31 +198,35 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style131" colspan="3">
+                            <td class="auto-style131" colspan="5">
                                 <h3><span class="auto-style39"><strong>Our Service</strong></span></h3>
                                 <br />
                                 <asp:Label ID="lblServiceAvailable" runat="server" Text='<%# Eval("service_available") %>'></asp:Label>
                                 <br />
                                 &nbsp;&nbsp;&nbsp;
                             </td>
-                            <td class="auto-style106"><span class="auto-style39"><strong>Business Hours</strong></span><br />
-                                <asp:Label ID="lblOpeningTime" runat="server" Text='<%# Eval("b_opening_time") %>'></asp:Label>
+                            <td class="auto-style106">
+                                <h2 class="auto-style137"><span class="auto-style39"><strong>Business Hours</strong></span></h2>
+                                <div class="auto-style137">
+                                    <br />
+                                    <asp:Label ID="lblOpeningTime" runat="server" Text='<%# Eval("b_opening_time") %>'></asp:Label>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style107" colspan="2">
+                            <td class="auto-style107" colspan="4">
                                 <h3><span class="auto-style39"><strong>Business Description</strong></span></h3>
                                 <br />
                                 <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("b_description") %>'></asp:Label>
                             </td>
                             <td class="auto-style108" colspan="2">
-                                <h3 class="auto-style39"><strong>History</strong></h3>
+                                <h3 class="auto-style138"><strong>History</strong></h3>
 &nbsp;<br />
                                 <asp:Label ID="lblHistory" runat="server" Text='<%# Eval("b_history") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style109" colspan="3">
+                            <td class="auto-style109" colspan="5">
                                 <h3><strong>Event &amp; Others</strong></h3>
                                 <br />
                                 <asp:Label ID="Additional" runat="server" Text='<%# Eval("additional") %>'></asp:Label>
