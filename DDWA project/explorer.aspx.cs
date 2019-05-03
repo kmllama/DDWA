@@ -13,5 +13,19 @@ namespace DDWA_project
         {
 
         }
+
+        protected void DataListBusiness_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+
+           if (e.CommandName == "viewDetails")
+            {
+                Response.Redirect("detailsViewPage.aspx?id=" + e.CommandArgument.ToString());
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -130,6 +130,7 @@
     <Content Include="Customer\CustomerPage.aspx" />
     <Content Include="Customer\customerRegister.aspx" />
     <Content Include="Business\EditImage.aspx" />
+    <Content Include="detailsViewPage.aspx" />
     <Content Include="explorer.aspx" />
     <Content Include="DefaultPage.aspx" />
     <Content Include="favicon.ico" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="Business\EditImage.aspx.designer.cs">
       <DependentUpon>EditImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detailsViewPage.aspx.cs">
+      <DependentUpon>detailsViewPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailsViewPage.aspx.designer.cs">
+      <DependentUpon>detailsViewPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="explorer.aspx.cs">
       <DependentUpon>explorer.aspx</DependentUpon>

@@ -31,6 +31,13 @@
             text-align: center;
             height: 61px;
         }
+        .auto-style10 {
+            width: 89px;
+            height: 33px;
+        }
+        .auto-style11 {
+            height: 33px;
+        }
     </style>
 
      
@@ -89,7 +96,7 @@
          </table>
      </div>
      <div class="container container-fluid">
-     <asp:DataList ID="DataListBusiness" runat="server" DataKeyField="biz_id" DataSourceID="SqlDataSource1">
+     <asp:DataList ID="DataListBusiness" runat="server" DataKeyField="biz_id" DataSourceID="SqlDataSource1" OnItemCommand="DataListBusiness_ItemCommand">
          <ItemTemplate>
              <table class="auto-style2" style="background-color: #CCCCFF">
                  <tr>
@@ -115,8 +122,8 @@
                      </td>
                  </tr>
                  <tr>
-                     <td class="auto-style5">Town</td>
-                     <td class="auto-style6">
+                     <td class="auto-style10">Town</td>
+                     <td class="auto-style11">
                          <asp:Label ID="Label4" runat="server" Text='<%# Eval("town") %>'></asp:Label>
                      </td>
                  </tr>
@@ -133,8 +140,14 @@
                      </td>
                  </tr>
                  <tr>
-                     <td colspan="2">
-                         <asp:Button ID="Button1" runat="server" Text="View Business" Width="311px" />
+                     <td class="auto-style8">ID</td>
+                     <td>
+                         <asp:Label ID="id" runat="server" Text='<%# Eval("biz_id") %>'></asp:Label>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2" class="text-center">
+                         <asp:Button ID="Button1" runat="server" Text="View Business" Width="167px" CommandArgument='<%#Eval("biz_id")%>' CommandName="viewDetails" OnClick="Button1_Click" />
                      </td>
                  </tr>
              </table>
