@@ -11,8 +11,8 @@
             margin-right: 358px;
         }
         .auto-style140 {
-            width: 99%;
-            height: 898px;
+            width: 139%;
+            height: 1022px;
         }
         .auto-style141 {
             height: 26px;
@@ -20,8 +20,7 @@
         .auto-style142 {
             height: 26px;
             width: 102px;
-            text-align: center;
-        }
+            }
         .auto-style146 {
             width: 102px;
         }
@@ -67,22 +66,32 @@
         .auto-style170 {
             width: 432px;
         }
+        .auto-style171 {
+            text-align: center;
+        }
+        .auto-style172 {
+            width: 102px;
+            height: 90px;
+        }
+        .auto-style173 {
+            height: 90px;
+        }
     </style>
 </head>
     
 <body>
     <form id="form1" runat="server">
 
-        <div class="Container">
-            <asp:DataList ID="DataList1" runat="server" CssClass="auto-style139" DataKeyField="biz_id" DataSourceID="SqlDataSource1">
+        <div class="auto-style171">
+            <asp:DataList ID="DataList1" runat="server" CssClass="auto-style139" DataKeyField="biz_id" DataSourceID="SqlDataSource1" Height="1100px" Width="1100px">
                 <ItemTemplate>
                     <table class="auto-style140">
                         <tr>
                             <td class="auto-style142">
-                                <asp:Image ID="Image1" runat="server" Height="60px" Width="60px" />
+                                <asp:Image ID="Image1" runat="server" Height="80px" Width="80px" ImageUrl='<%# Eval("logo") %>' />
                             </td>
                             <td class="auto-style149" colspan="2">
-                                <asp:Label ID="bizName" runat="server" Text='<%# Eval("b_name") %>'></asp:Label>
+                                <asp:Label ID="bizName" runat="server" Text='<%# Eval("b_name") %>' Font-Bold="True" Font-Size="XX-Large"></asp:Label>
                             </td>
                             <td class="auto-style141"></td>
                         </tr>
@@ -165,8 +174,8 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td class="auto-style146">&nbsp;</td>
-                            <td colspan="2">
+                            <td class="auto-style172"></td>
+                            <td colspan="2" class="auto-style173">
                                 <table class="auto-style160">
                                     <tr>
                                         <td class="auto-style170">
@@ -180,7 +189,7 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td>&nbsp;</td>
+                            <td class="auto-style173"></td>
                         </tr>
                     </table>
                 </ItemTemplate>
@@ -191,6 +200,9 @@
                 <asp:QueryStringParameter Name="Param1" QueryStringField="id" />
             </SelectParameters>
         </asp:SqlDataSource>
+        <br />
+         <br />
+         <br />
     </form>
 </body>
 </html>

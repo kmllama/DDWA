@@ -19,7 +19,7 @@ namespace DDWA_project
 
            if (e.CommandName == "viewDetails")
             {
-                Response.Redirect("detailsViewPage.aspx?id=" + e.CommandArgument.ToString());
+                Response.Redirect("MainBusinessPage.aspx?id=" + e.CommandArgument.ToString());
             }
         }
 

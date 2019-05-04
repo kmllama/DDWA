@@ -128,7 +128,7 @@
             <img src="../image/ddwa.JPG" width="400" />
         </div>
     </div>
-     
+     </div>
     
     
      <div class="container-fluid bg-info fixed-bottom">

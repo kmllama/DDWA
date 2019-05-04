@@ -13,6 +13,15 @@ namespace DDWA_project.Business {
     public partial class BusinessPage {
         
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
         /// lblid control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace DDWA_project.Business {
         protected global::System.Web.UI.WebControls.Label lblid;
         
         /// <summary>
-        /// form1 control.
+        /// logOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button logOut;
         
         /// <summary>
         /// DetailsView1 control.

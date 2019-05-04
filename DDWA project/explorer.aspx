@@ -38,6 +38,9 @@
         .auto-style11 {
             height: 33px;
         }
+        .auto-style12 {
+            width: 12px;
+        }
     </style>
 
      
@@ -67,7 +70,7 @@
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Register</a>
               <div class="dropdown-menu">
                   <a href="Business/RegisterBusiness.aspx" class="dropdown-item">Business</a>
-                  <a href="Customer/customerRegister.aspx" class="dropdown-item">Customer</a>
+                  <a href="../customerRegister.aspx" class="dropdown-item">Customer</a>
               </div>
       </li> 
          <li class="nav-item dropdown">
@@ -90,13 +93,13 @@
              <tr>
                  <td>
                      <asp:DropDownList ID="DropDownBusinessType" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="b_type" DataValueField="b_type" Height="29px" Width="204px"></asp:DropDownList></td>
-                 <td> </td>
+                 <td class="auto-style12"> </td>
                 
              </tr>
          </table>
      </div>
      <div class="container container-fluid">
-     <asp:DataList ID="DataListBusiness" runat="server" DataKeyField="biz_id" DataSourceID="SqlDataSource1" OnItemCommand="DataListBusiness_ItemCommand">
+     <asp:DataList ID="DataListBusiness" runat="server" DataKeyField="biz_id" DataSourceID="SqlDataSource1" OnItemCommand="DataListBusiness_ItemCommand" Height="200px" RepeatDirection="Horizontal" Width="362px">
          <ItemTemplate>
              <table class="auto-style2" style="background-color: #CCCCFF">
                  <tr>

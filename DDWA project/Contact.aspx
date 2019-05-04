@@ -46,14 +46,14 @@
         <a class="nav-link" href="../Contact.aspx">Contact Us</a>
       </li>    
         <li class="nav-item">
-        <a class="nav-link" href="#">Explore</a>
+        <a class="nav-link" href="../explorer.aspx">Explore</a>
       </li> 
         <!-- dropdown -->
           <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Register</a>
               <div class="dropdown-menu">
                   <a href="../Business/RegisterBusiness.aspx" class="dropdown-item">Business</a>
-                  <a href="../Customer/customerRegister.aspx" class="dropdown-item">Customer</a>
+                  <a href="../customerRegister.aspx" class="dropdown-item">Customer</a>
               </div>
       </li> 
          <li class="nav-item dropdown">

@@ -25,5 +25,11 @@ namespace DDWA_project.Business
         {
            
         }
+
+        protected void logOut_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("../DefaultPage.aspx");
+        }
     }
 }

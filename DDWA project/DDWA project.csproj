@@ -112,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="BusinessPageeListView.aspx" />
     <Content Include="Business\addEvent.aspx" />
     <Content Include="Business\businessLogin.aspx" />
     <Content Include="Business\BusinessPage.aspx" />
@@ -153,6 +152,7 @@
     <Content Include="image\groceries.jpg" />
     <Content Include="image\holiday-place.jpg" />
     <Content Include="image\holiday-tent.jpg" />
+    <Content Include="image\home.JPG" />
     <Content Include="image\house.jpg" />
     <Content Include="image\img1.jpg" />
     <Content Include="image\img2.jpg" />
@@ -209,13 +209,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BusinessPageeListView.aspx.cs">
-      <DependentUpon>BusinessPageeListView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BusinessPageeListView.aspx.designer.cs">
-      <DependentUpon>BusinessPageeListView.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Business\addEvent.aspx.cs">
       <DependentUpon>addEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

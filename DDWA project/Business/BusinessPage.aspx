@@ -12,6 +12,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
+    <style type="text/css">
+        .auto-style1 {
+            width: 97px;
+        }
+        .auto-style2 {
+            width: 361px;
+            height: 282px;
+        }
+    </style>
+
+
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-info navbar-dark">
@@ -24,13 +35,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../DefaultPage.aspx">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../About.aspx">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Contact.aspx">Contact Us</a>
-                </li>
-                <li class="nav-item">
+                           <li class="nav-item">
                     <a class="nav-link" href="#">Explore</a>
                 </li>
                  <li class="nav-item">
@@ -48,20 +53,8 @@
                   <li class="nav-item">
                     <a class="nav-link" href="../Business/EditEvent.aspx">Edit Event </a>
                 </li>
-                <!-- dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Register</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Business</a>
-                        <a href="../Customer/customerRegister.aspx" class="dropdown-item">Customer</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link "href="../Defaultpage.aspx">Sign Out</a>
-                    
-                </li>
-                
-                
+              
+              
                 <!--https://www.youtube.com/watch?v=pkIqgB3fH70&list=PLbGui_ZYuhij_HswuaGK-ABs1vfC5HTKn&index=58-->
             </ul>
 
@@ -72,16 +65,22 @@
     <!--Login System-->    
 
     <div class="container">
+         <form id="form1" runat="server">
         <table><tr>
-            <td>
+            <td class="auto-style1">
                 ID:
                 <asp:Label ID="lblid" runat="server" Text=""></asp:Label>
-              </td></tr></table>
+              </td>
+            <td>  
+                <asp:Button ID="logOut" runat="server" Height="33px" OnClick="logOut_Click" Text="Log Out" Width="93px" />
+            </td>
+               </tr></table>
+             
         <div class="row">
             <div class="col-md-8">
-                <form id="form1" runat="server">
+                
                     <br />
-                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="455px" Width="1011px">
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="510px" Width="635px">
                         <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                         <Fields>
                             <asp:BoundField DataField="biz_id" HeaderText="B. ID" ReadOnly="True" SortExpression="biz_id" />
@@ -177,7 +176,7 @@
         </div>            
        
         <div class="col-md-4">
-            <img src="../image/ddwa.JPG" width="400" />
+            <img src="../image/ddwa.JPG" class="auto-style2" />
         </div>
     </div>
      
@@ -197,6 +196,8 @@
 
          </footer>
      </div>
+
+        </div>
 
 
 </body>
