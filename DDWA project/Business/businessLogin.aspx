@@ -86,7 +86,7 @@
     <div class="form-group">
       <label for="pwd">Password:</label>
       
-         <asp:TextBox ID="password" runat="server" class="form-control" placeholder="Enter password">  </asp:TextBox>
+         <asp:TextBox ID="password" runat="server" class="form-control" placeholder="Enter password" TextMode="Password"></asp:TextBox>
     </div>
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>

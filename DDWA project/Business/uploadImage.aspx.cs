@@ -22,7 +22,7 @@ namespace DDWA_project
             if (Session["biz_id"] == null)
                 Response.Redirect("~/Business/businessLogin.aspx");
             txtMember.Text = "Member :" + Session["biz_id"];
-            txtb_id.Text= Session["biz_id"].ToString();
+            txtb_id.Text = Session["biz_id"].ToString();
             getidno();
         }
 
@@ -52,8 +52,8 @@ namespace DDWA_project
             }
             else
             {
-                               
-                String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString; 
+
+                String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
                 SqlConnection scon1 = new SqlConnection(mycon1);
                 String myquery1 = "select max(s_no) from image";
                 SqlCommand cmd1 = new SqlCommand();
@@ -73,10 +73,10 @@ namespace DDWA_project
             }
 
         }
-        private void savedata(int image_id, String logo, String image1, String image2,String image3,int biz_id)
+        private void savedata(int image_id, String logo, String image1, String image2, String image3, int biz_id)
         {
-            String updatepass = "insert into image(s_no,logo,image1,image2,image3,biz_id) values('"+ txtId.Text + "','" + logo + "','" + image1 + "','" + image2 + "','" + image3 + "','" + txtb_id.Text + "')";
-            String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString; 
+             String updatepass = "insert into image(s_no,logo,image1,image2,image3,biz_id) values('" + txtId.Text + "','" + logo + "','" + image1 + "','" + image2 + "','" + image3 + "','" + txtb_id.Text + "')";
+            String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
             SqlConnection scon = new SqlConnection(mycon1);
             scon.Open();
             SqlCommand cmd1 = new SqlCommand();
@@ -85,7 +85,7 @@ namespace DDWA_project
             cmd1.ExecuteNonQuery();
             scon.Close();
         }
-        
+
         protected void btnUpload_Click(object sender, EventArgs e)
         {
             String fileextension;
@@ -94,7 +94,7 @@ namespace DDWA_project
             String image1 = "";
             String image2 = "";
             String image3 = "";
-            
+
             HttpFileCollection hfc = Request.Files;
             for (int i = 0; i < hfc.Count; i++)
             {
@@ -123,9 +123,10 @@ namespace DDWA_project
                     }
                 }
             }
-            savedata(image_id,logo, image1, image2, image3,Convert.ToInt32(txtb_id.Text));
+            savedata(image_id, logo, image1, image2, image3, Convert.ToInt32(txtb_id.Text));
             lblSuccess.Text = "Data Has Been Saved Successfully";
             getidno();
         }
     }
-}//https://www.youtube.com/watch?v=D2nehcXbaSQ&t=970s
+    //https://www.youtube.com/watch?v=D2nehcXbaSQ&t=970s
+}

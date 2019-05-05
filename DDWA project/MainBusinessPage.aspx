@@ -92,6 +92,7 @@
         .auto-style138 {
             text-decoration: underline;
             text-align: left;
+            background-color: #00CC99;
         }
         .auto-style140 {
             text-align: justify;
@@ -143,6 +144,18 @@
         .auto-style156 {
             text-align: right;
         }
+        .auto-style157 {
+            background-color: #00CC99;
+        }
+        .auto-style158 {
+            text-align: left;
+            background-color: #00CC99;
+        }
+        .auto-style159 {
+            width: 493px;
+            height: 33px;
+            background-color: #00CC99;
+        }
     </style>
 </head>
     
@@ -184,7 +197,7 @@
                         <tr>
                             <td class="auto-style121">
                                 <h3>&nbsp;</h3>
-                                <h3><span class="auto-style39"><strong>Contact Details</strong></span></h3>
+                                <h3 class="auto-style157"><span class="auto-style39"><strong>Contact Details</strong></span></h3>
                                 <br />
                                 <table class="auto-style136" style="border-color:  #000000; border-width: medium">
                                     <tr>
@@ -229,6 +242,7 @@
                                     </tr>
                                 </table>
                                 <span class="auto-style39"><strong>
+                                <br />
                                 ADDRESS<br /></strong></span> <br />
                                 <asp:Label ID="lblAddress" runat="server" Text='<%# Eval("address1") %>'></asp:Label>
                                 <br />
@@ -243,12 +257,12 @@
                             </td>
 
                             <td class="auto-style122" colspan="3">
-                                <h2><span class="auto-style39"><strong>About US</strong></span></h2>
+                                <h2 class="auto-style157"><span class="auto-style39"><strong>About US</strong></span></h2>
                                 <asp:Label ID="lblAbout" runat="server" Font-Size="Medium" Text='<%# Eval("about_us") %>'></asp:Label>
                             </td>
                         </tr>
                         <tr>
-                            <td class="auto-style122" colspan="4">
+                            <td class="auto-style122" colspan="4" style="border-top-style: solid; border-bottom-style: solid">
                                 <h3><span class="auto-style39"><strong>Our Service</strong></span></h3>
                                 <p>
                                     <asp:Label ID="lblServiceAvailable" runat="server" Text='<%# Eval("service_available") %>'></asp:Label>
@@ -257,7 +271,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style131" colspan="3">
-                                <h3><strong>Upcoming Events</strong></h3>
+                                <h3 class="auto-style157"><strong><span class="auto-style157">Upcoming</span> Events</strong></h3>
                                 <div class="auto-style137">
                                     <table class="auto-style154">
                                         <tr>
@@ -289,25 +303,25 @@
                                 </div>
                             </td>
                             <td class="auto-style106">
-                                <table class="auto-style1">
+                                <table class="auto-style1" border="0">
                                     <tr>
                                         <td class="auto-style140">&nbsp;</td>
-                                        <td class="auto-style142">
-                                            <h2 class="auto-style137"><span class="auto-style39"><strong>Business Hours</strong></span></h2>
+                                        <td class="auto-style142" style="border-style: solid; border-width: thin">
+                                            <h2 class="auto-style158"><span class="auto-style39"><strong>Business Hours</strong></span></h2>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="auto-style143"></td>
-                                        <td class="auto-style144">
+                                        <td class="auto-style144" style="border-style: solid; border-width: thin">
                                             <asp:Label ID="lblOpeningTime" runat="server" Text='<%# Eval("b_opening_time") %>'></asp:Label>
                                         </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <tr>
+                        <tr style="border-top-style: solid; border-width: thin">
                             <td class="auto-style107">
-                                <h3><span class="auto-style39"><strong>Business Description</strong></span></h3>
+                                <h3 class="auto-style157"><span class="auto-style39"><strong>Business Description</strong></span></h3>
                                 <br />
                                 <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("b_description") %>'></asp:Label>
                             </td>

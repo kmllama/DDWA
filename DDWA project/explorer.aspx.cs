@@ -17,13 +17,17 @@ namespace DDWA_project
         protected void DataListBusiness_ItemCommand(object source, DataListCommandEventArgs e)
         {
 
-           if (e.CommandName == "viewDetails")
-            {
-                Response.Redirect("MainBusinessPage.aspx?id=" + e.CommandArgument.ToString());
-            }
+           
+                Response.Redirect("detailsPage.aspx?id="+ e.CommandArgument.ToString());
+          
+        }
+        //https://www.youtube.com/watch?v=gXzZ32I-tsQ&t=1825s
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void DataListBusiness_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

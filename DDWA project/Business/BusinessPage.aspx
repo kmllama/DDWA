@@ -20,6 +20,9 @@
             width: 361px;
             height: 282px;
         }
+        .auto-style3 {
+            margin-right: 5px;
+        }
     </style>
 
 
@@ -80,7 +83,7 @@
             <div class="col-md-8">
                 
                     <br />
-                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="510px" Width="635px">
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="599px" Width="592px" CssClass="auto-style3">
                         <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                         <Fields>
                             <asp:BoundField DataField="biz_id" HeaderText="B. ID" ReadOnly="True" SortExpression="biz_id" />
@@ -163,14 +166,14 @@
                             <asp:Parameter Name="b_weblink" Type="String" />
                             <asp:Parameter Name="b_social_site" Type="String" />
                             <asp:Parameter Name="about_us" Type="String" />
-                            <asp:Parameter Name="b_description" Type="String" />
+                            <asp:Parameter Name="b_description" Type="String"/>
                             <asp:Parameter Name="b_history" Type="String" />
                             <asp:Parameter Name="b_opening_time" Type="String" />
                             <asp:Parameter Name="additional" Type="String" />
                             <asp:Parameter Name="service_available" Type="String" />
                             <asp:Parameter Name="biz_id" Type="Int32" />
                         </UpdateParameters>
-                    </asp:SqlDataSource>
+                    </asp:SqlDataSource>                    
                     <br />
                 </form>
         </div>            

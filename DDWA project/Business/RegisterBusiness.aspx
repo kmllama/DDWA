@@ -162,13 +162,13 @@
                     <div class="form-group">
                         <label>Businee Email:</label>
 
-                        <asp:TextBox ID="txtemail" runat="server" class="form-control" placeholder="E-mail">  </asp:TextBox>
+                        <asp:TextBox ID="txtemail" runat="server" class="form-control" placeholder="E-mail" TextMode="Email"></asp:TextBox>
                     </div>
                     <!--16-->
                     <div class="form-group">
                         <label>Website Address:</label>
 
-                        <asp:TextBox ID="txtWebAdd" runat="server" class="form-control" placeholder="Domain">  </asp:TextBox>
+                        <asp:TextBox ID="txtWebAdd" runat="server" class="form-control" placeholder="Domain"></asp:TextBox>
                     </div>
                     <!--17-->
                     <div class="form-group">
@@ -214,8 +214,8 @@
                     </div>
           
                     <br />
-                    <asp:Label ID="lblSuccess" runat="server"></asp:Label>
-                    <asp:Label ID="lblError" runat="server"></asp:Label>
+                    <asp:Label ID="lblSuccess" runat="server" ForeColor="#00CC99"></asp:Label>
+                    <asp:Label ID="lblError" runat="server" ForeColor="#CC00CC"></asp:Label>
                     <br />
                     <br />
 

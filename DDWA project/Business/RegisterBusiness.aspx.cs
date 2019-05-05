@@ -16,20 +16,21 @@ namespace DDWA_project.Business
         static int b_Id;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            lblError.Text = "";
+
             getid();
 
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-
-           
-            //try
-            //{
-
-
             
+
+            try
+            {
+
+
+
                 string query = "Insert Into business_details(biz_id,b_password,b_name,owner_name,b_type,address1,town,area,city,post_code,country,contact_phone,contact_mobile,b_email,b_weblink,b_social_site,about_us,b_description,b_history,b_opening_time,additional,service_available) VALUES (" + txtBizId.Text.Trim() + ", '" + txtPassword.Text.Trim() + "', '" + txtBizName.Text + "', '" + txtOwnerName.Text + "', '" + txtBusinessType.Text + "','" + txtAdd1.Text + "', '" + txtTown.Text + "', '" + txtArea.Text + "', '" + txtCity.Text + "', '" + txtPostCode.Text + "', '" + txtCountry.Text + "', '" + txtContactP.Text + "', '" + txtContactM.Text + "', '" + txtemail.Text + "', '" + txtWebAdd.Text + "', '" + txtSoicalLink.Text + "', '" + txtAbout.Text + "', '" + txtDescription.Text.Trim() + "', '" + txtHistory.Text.Trim() + "','" + txtOpeningTime.Text.Trim() + "','" + txtAdditional.Text.Trim() + "','" + txtService.Text.Trim()+ "')";
 
                 SqlCommand cmd = new SqlCommand(query);
@@ -41,12 +42,12 @@ namespace DDWA_project.Business
                 cmd.ExecuteNonQuery();
                 lblSuccess.Text = "Data has been registered... please Sign in to upload Image and other Details";
                 con.Close();
-            //}
+            }
 
-            //catch
-            //{
-            //    lblError.Text = "Please Check the input value and click Register";
-            //}
+            catch
+            {
+                lblError.Text = "Please Check the input value and click Register first user name and password and add more details";
+            }
 
         }
            

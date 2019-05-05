@@ -128,7 +128,7 @@
     <Content Include="Customer\customerLogin.aspx" />
     <Content Include="Customer\CustomerPage.aspx" />
     <Content Include="Customer\customerRegister.aspx" />
-    <Content Include="Business\EditImage.aspx" />
+    <Content Include="detailsPage.aspx" />
     <Content Include="detailsViewPage.aspx" />
     <Content Include="explorer.aspx" />
     <Content Include="DefaultPage.aspx" />
@@ -162,8 +162,10 @@
     <Content Include="image\rent-cab.jpg" />
     <Content Include="image\rent-house.jpg" />
     <Content Include="image\restaurant.jpg" />
+    <Content Include="image\searchIcon.JPG" />
     <Content Include="MainBusinessPage.aspx" />
     <Content Include="MainBusinessPage2.aspx" />
+    <Content Include="restaurantExplorer.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -279,12 +281,12 @@
     <Compile Include="Customer\customerRegister.aspx.designer.cs">
       <DependentUpon>customerRegister.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Business\EditImage.aspx.cs">
-      <DependentUpon>EditImage.aspx</DependentUpon>
+    <Compile Include="detailsPage.aspx.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Business\EditImage.aspx.designer.cs">
-      <DependentUpon>EditImage.aspx</DependentUpon>
+    <Compile Include="detailsPage.aspx.designer.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="detailsViewPage.aspx.cs">
       <DependentUpon>detailsViewPage.aspx</DependentUpon>
@@ -325,6 +327,13 @@
       <DependentUpon>MainBusinessPage2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="restaurantExplorer.aspx.cs">
+      <DependentUpon>restaurantExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="restaurantExplorer.aspx.designer.cs">
+      <DependentUpon>restaurantExplorer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

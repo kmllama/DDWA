@@ -90,7 +90,7 @@
                           
                         <label>Image ID</label>
                           
-                        <asp:TextBox ID="txtId" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="txtId" runat="server" CssClass="form-control" ></asp:TextBox>
                         
                     </div>
                      <!--1-->
@@ -132,8 +132,7 @@
                     <br />
 
             <asp:Button ID="btnUpload" runat="server" Text="Upload" class="btn btn-default" Style="border-color: #000000" OnClick="btnUpload_Click" />
-
-            </form>
+                     &nbsp;&nbsp;</form>
         </div>
             
         <br />
