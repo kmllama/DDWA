@@ -22,26 +22,26 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="../DefaultPage.aspx">Home</a>
                 </li>
-              
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Explore</a>
+                           <li class="nav-item">
+                    <a class="nav-link" href="../explorer.aspx">Explore</a>
                 </li>
-                  <li class="nav-item">
+
+                 <li class="nav-item">
+                    <a class="nav-link" href="../Business/BusinessPage.aspx">Edit Details</a>
+                </li>
+                 <li class="nav-item">
                     <a class="nav-link" href="uploadImage.aspx">upload Image</a>
+                </li>                 
+                 <li class="nav-item">
+                    <a class="nav-link" href="../myPage.aspx">View Page</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Add Event </a>
                 </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../Business/EditImage.aspx">Edit Event </a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="../MainBusinessPage2.aspx">BizPage</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="../Business/addEvent.aspx">Add Event </a>
-                </li>
-                 <li class="nav-item">
                     <a class="nav-link" href="../Business/EditEvent.aspx">Edit Event </a>
                 </li>
              
@@ -55,11 +55,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h4><u>Business Registration</u></h4>
-                <br />
-                <br />
+                <h4>Create Event , Promotions or offer or and Adverts</h4>
                 <form id="registerEvent" runat="server">
+                    <div class="text-right">
+                        <asp:Button ID="Button1" runat="server" Height="39px" OnClick="Button1_Click" Text="Log Out" Width="108px" />
+                <br />
+                <br />
             <!--1-->
+                    </div>
                     <div class="form-group">
                         <label>Event ID :</label>
 

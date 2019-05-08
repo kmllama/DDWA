@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="detailsPage.aspx.cs" Inherits="DDWA_project.detailsPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="myPage.aspx.cs" Inherits="DDWA_project.myPage" %>
 
 <!DOCTYPE html>
 
@@ -246,7 +246,7 @@
                                 <br />
                                 <br />
                                 <br />
-                                <asp:Image ID="Image3" runat="server" Height="300px" ImageUrl='<%# Eval("image2") %>' Width="400px" />
+                                <asp:Image ID="Image3" runat="server" Height="300px" ImageUrl='<%# Eval("image1") %>' Width="400px" />
                             </td>
                             <td>&nbsp;</td>
                         </tr>
@@ -303,13 +303,13 @@
         </asp:DataList>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ddwaConnectionString %>" SelectCommand="SELECT DISTINCT business_details.biz_id, business_details.b_name, business_details.b_type, business_details.town, business_details.city, business_details.post_code, business_details.contact_phone, business_details.contact_mobile, business_details.b_email, business_details.b_weblink, business_details.b_social_site, business_details.about_us, business_details.b_description, business_details.b_history, business_details.b_opening_time, business_details.additional, business_details.service_available, image.s_no, image.logo, image.image1, image.image2, image.biz_id AS Expr1 FROM business_details INNER JOIN image ON business_details.biz_id = image.biz_id WHERE (business_details.biz_id = @Param1)">
             <SelectParameters>
-                <asp:QueryStringParameter Name="Param1" QueryStringField="id" />
+                <asp:SessionParameter Name="Param1" SessionField="biz_id" />
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
         <asp:SqlDataSource ID="SqlDataSourceEvent" runat="server" ConnectionString="<%$ ConnectionStrings:ddwaConnectionString %>" SelectCommand="SELECT TOP (1) business_details.biz_id, event.event_name, event.event_details, event.event_date, event.time FROM business_details INNER JOIN event ON business_details.biz_id = event.biz_id WHERE (business_details.biz_id = @Param1)">
             <SelectParameters>
-                <asp:QueryStringParameter Name="Param1" QueryStringField="id" />
+                <asp:SessionParameter Name="Param1" SessionField="biz_id" />
             </SelectParameters>
         </asp:SqlDataSource>
       

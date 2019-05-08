@@ -33,43 +33,50 @@ namespace DDWA_project
 
         public void getidno()
         {
-            String mycon = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
-            SqlConnection scon = new SqlConnection(mycon);
-            String myquery = "select s_no from image";
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = myquery;
-            cmd.Connection = scon;
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            scon.Close();
-            if (ds.Tables[0].Rows.Count < 1)
+            try
             {
-                txtId.Text = "101";
-                image_id = 101;
+                String mycon = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
+                SqlConnection scon = new SqlConnection(mycon);
+                String myquery = "select s_no from image";
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = myquery;
+                cmd.Connection = scon;
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                scon.Close();
+                if (ds.Tables[0].Rows.Count < 1)
+                {
+                    txtId.Text = "101";
+                    image_id = 101;
 
+                }
+                else
+                {
+
+                    String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
+                    SqlConnection scon1 = new SqlConnection(mycon1);
+                    String myquery1 = "select max(s_no) from image";
+                    SqlCommand cmd1 = new SqlCommand();
+                    cmd1.CommandText = myquery1;
+                    cmd1.Connection = scon1;
+                    SqlDataAdapter da1 = new SqlDataAdapter();
+                    da1.SelectCommand = cmd1;
+                    DataSet ds1 = new DataSet();
+                    da1.Fill(ds1);
+                    txtId.Text = ds1.Tables[0].Rows[0][0].ToString();
+                    int a;
+                    a = Convert.ToInt16(txtId.Text);
+                    a = a + 1;
+                    image_id = a;
+                    txtId.Text = a.ToString();
+                    scon1.Close();
+                }
             }
-            else
+            catch
             {
 
-                String mycon1 = ConfigurationManager.ConnectionStrings["ddwaConnectionString"].ConnectionString;
-                SqlConnection scon1 = new SqlConnection(mycon1);
-                String myquery1 = "select max(s_no) from image";
-                SqlCommand cmd1 = new SqlCommand();
-                cmd1.CommandText = myquery1;
-                cmd1.Connection = scon1;
-                SqlDataAdapter da1 = new SqlDataAdapter();
-                da1.SelectCommand = cmd1;
-                DataSet ds1 = new DataSet();
-                da1.Fill(ds1);
-                txtId.Text = ds1.Tables[0].Rows[0][0].ToString();
-                int a;
-                a = Convert.ToInt16(txtId.Text);
-                a = a + 1;
-                image_id = a;
-                txtId.Text = a.ToString();
-                scon1.Close();
             }
 
         }
@@ -126,6 +133,12 @@ namespace DDWA_project
             savedata(image_id, logo, image1, image2, image3, Convert.ToInt32(txtb_id.Text));
             lblSuccess.Text = "Data Has Been Saved Successfully";
             getidno();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("../DefaultPage.aspx");
         }
     }
     //https://www.youtube.com/watch?v=D2nehcXbaSQ&t=970s

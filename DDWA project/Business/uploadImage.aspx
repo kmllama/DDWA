@@ -21,58 +21,38 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item">
+               <li class="nav-item">
                     <a class="nav-link" href="../DefaultPage.aspx">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../About.aspx">About Us</a>
+                           <li class="nav-item">
+                    <a class="nav-link" href="../explorer.aspx">Explore</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Contact.aspx">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Explore</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="uploadImage.aspx">upload Image</a>
-                </li>
-               
                  <li class="nav-item">
-                    <a class="nav-link" href="../MainBusinessPage2.aspx">BizPage</a>
+                    <a class="nav-link" href="../Business/BusinessPage.aspx">Edit Details</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">upload Image</a>
+                </li>                 
+                 <li class="nav-item">
+                    <a class="nav-link" href="../myPage.aspx">View Page</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="../Business/addEvent.aspx">Add Event </a>
                 </li>
-                 <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="../Business/EditEvent.aspx">Edit Event </a>
-                </li>
-                <!-- dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Register</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Business</a>
-                        <a href="../Customer/customerRegister.aspx" class="dropdown-item">Customer</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Sign In</a>
-                    <div class="dropdown-menu">
-                        <a href="../Business/businessLogin.aspx" class="dropdown-item">Business</a>
-                        <a href="../Customer/customerLogin.aspx" class="dropdown-item">Customers</a>
-                    </div>
                 </li>
                 <!--https://www.youtube.com/watch?v=pkIqgB3fH70&list=PLbGui_ZYuhij_HswuaGK-ABs1vfC5HTKn&index=58-->
             </ul>
-
-
-
+            
         </div>
     </nav>
-    <!--Login System-->
+    <div class="text-right">
+    <!--Login System-->   
    
-   
-
     <br />
+
+    </div>
 
     <div class="container">
         <div class="row">
@@ -81,6 +61,10 @@
                 <br />
                 <br />
                 <form id="RegisterForm" runat="server">
+                    <div class="text-right">    
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log Out" />
+      
+    </div>
                      <div class="form-group">
                                                                        
                          <asp:Label ID="txtMember" runat="server" Text=""></asp:Label>

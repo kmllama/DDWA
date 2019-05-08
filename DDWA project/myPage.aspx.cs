@@ -5,22 +5,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace DDWA_project.Business
+namespace DDWA_project
 {
-    public partial class EditEvent : System.Web.UI.Page
+    public partial class myPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["biz_id"] == null)
                 Response.Redirect("~/Business/businessLogin.aspx");
-            txtBizID.Text =  Session["biz_id"].ToString();
-            
+            //lblid.Text = Session["biz_id"].ToString();
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Session.Abandon();
-            Response.Redirect("../DefaultPage.aspx");
+            Response.Redirect("~/Business/BusinessPage.aspx");
         }
     }
 }

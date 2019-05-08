@@ -39,16 +39,16 @@
                     <a class="nav-link" href="../DefaultPage.aspx">Home</a>
                 </li>
                            <li class="nav-item">
-                    <a class="nav-link" href="#">Explore</a>
+                    <a class="nav-link" href="../explorer.aspx">Explore</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Edit Details</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="uploadImage.aspx">upload Image</a>
-                </li>
+                </li>                 
                  <li class="nav-item">
-                    <a class="nav-link" href="EditImage.aspx">Edit Image</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="../MainBusinessPage.aspx">BizPage</a>
+                    <a class="nav-link" href="../myPage.aspx">View Page</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="../Business/addEvent.aspx">Add Event </a>
@@ -78,13 +78,13 @@
                 <asp:Button ID="logOut" runat="server" Height="33px" OnClick="logOut_Click" Text="Log Out" Width="93px" />
             </td>
                </tr></table>
-             
+             <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
                 
                     <br />
-                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" ForeColor="Black" Height="599px" Width="592px" CssClass="auto-style3">
-                        <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="biz_id" DataSourceID="SqlDataSource1" Height="737px" Width="700px" CssClass="auto-style3">
+                        <EditRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
                         <Fields>
                             <asp:BoundField DataField="biz_id" HeaderText="B. ID" ReadOnly="True" SortExpression="biz_id" />
                             <asp:BoundField DataField="b_password" HeaderText="Password" SortExpression="b_password" />
@@ -103,18 +103,32 @@
                             <asp:BoundField DataField="b_email" HeaderText="Email" SortExpression="b_email" />
                             <asp:BoundField DataField="b_weblink" HeaderText="Website" SortExpression="b_weblink" />
                             <asp:BoundField DataField="b_social_site" HeaderText="Social Site" SortExpression="b_social_site" />
-                            <asp:BoundField DataField="about_us" HeaderText="About Us" SortExpression="about_us" />
-                            <asp:BoundField DataField="b_description" HeaderText="B. Description" SortExpression="b_description" />
-                            <asp:BoundField DataField="b_history" HeaderText="B. History" SortExpression="b_history" />
-                            <asp:BoundField DataField="b_opening_time" HeaderText="Opening Time" SortExpression="b_opening_time" />
-                            <asp:BoundField DataField="additional" HeaderText="Additional" SortExpression="additional" />
-                            <asp:BoundField DataField="service_available" HeaderText="Service" SortExpression="service_available" />
+                            <asp:BoundField DataField="about_us" HeaderText="About Us" SortExpression="about_us" >
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="b_description" HeaderText="B. Description" SortExpression="b_description" >
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="b_history" HeaderText="B. History" SortExpression="b_history" >
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="b_opening_time" HeaderText="Opening Time" SortExpression="b_opening_time" >
+
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
+
+                            <asp:BoundField DataField="additional" HeaderText="Additional" SortExpression="additional" >
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="service_available" HeaderText="Service" SortExpression="service_available" >
+                            <ItemStyle Height="300px" Width="500px" />
+                            </asp:BoundField>
                             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
                         </Fields>
-                        <FooterStyle BackColor="#CCCCCC" />
-                        <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-                        <RowStyle BackColor="White" />
+                        <FooterStyle BackColor="White" ForeColor="#000066" />
+                        <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                        <RowStyle ForeColor="#000066" />
                     </asp:DetailsView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ddwaConnectionString %>" SelectCommand="SELECT * FROM [business_details] WHERE ([biz_id] = @biz_id)" DeleteCommand="DELETE FROM [business_details] WHERE [biz_id] = @biz_id" InsertCommand="INSERT INTO [business_details] ([biz_id], [b_password], [b_name], [owner_name], [b_type], [b_join_date], [address1], [town], [area], [city], [post_code], [country], [contact_phone], [contact_mobile], [b_email], [b_weblink], [b_social_site], [about_us], [b_description], [b_history], [b_opening_time], [additional], [service_available]) VALUES (@biz_id, @b_password, @b_name, @owner_name, @b_type, @b_join_date, @address1, @town, @area, @city, @post_code, @country, @contact_phone, @contact_mobile, @b_email, @b_weblink, @b_social_site, @about_us, @b_description, @b_history, @b_opening_time, @additional, @service_available)" UpdateCommand="UPDATE [business_details] SET [b_password] = @b_password, [b_name] = @b_name, [owner_name] = @owner_name, [b_type] = @b_type, [b_join_date] = @b_join_date, [address1] = @address1, [town] = @town, [area] = @area, [city] = @city, [post_code] = @post_code, [country] = @country, [contact_phone] = @contact_phone, [contact_mobile] = @contact_mobile, [b_email] = @b_email, [b_weblink] = @b_weblink, [b_social_site] = @b_social_site, [about_us] = @about_us, [b_description] = @b_description, [b_history] = @b_history, [b_opening_time] = @b_opening_time, [additional] = @additional, [service_available] = @service_available WHERE [biz_id] = @biz_id">
                         <DeleteParameters>
@@ -181,8 +195,7 @@
         <div class="col-md-4">
             <img src="../image/ddwa.JPG" class="auto-style2" />
         </div>
-    </div>
-     
+  
     
     <br />
     <br />
@@ -200,8 +213,7 @@
          </footer>
      </div>
 
-        </div>
-
+        
 
 </body>
 </html>

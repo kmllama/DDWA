@@ -21,50 +21,28 @@
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                    <li class="nav-item">
                     <a class="nav-link" href="../DefaultPage.aspx">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../About.aspx">About Us</a>
+                           <li class="nav-item">
+                    <a class="nav-link" href="../explorer.aspx">Explore</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../Contact.aspx">Contact Us</a>
+                 <li class="nav-item">
+                    <a class="nav-link" href="../Business/BusinessPage.aspx">Edit Details</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Explore</a>
-                </li>
-                  <li class="nav-item">
+                 <li class="nav-item">
                     <a class="nav-link" href="uploadImage.aspx">upload Image</a>
-                </li>
+                </li>                 
                  <li class="nav-item">
-                    <a class="nav-link" href="EditImage.aspx">Edit Image</a>
-                </li>
-                
-                 <li class="nav-item">
-                    <a class="nav-link" href="../MainBusinessPage2.aspx">BizPage</a>
+                    <a class="nav-link" href="../myPage.aspx">View Page</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link" href="../Business/addEvent.aspx">Add Event </a>
                 </li>
-                   <li class="nav-item">
-                    <a class="nav-link" href="../Business/EditImage.aspx">Edit Event </a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Edit Event </a>
                 </li>
-                <!-- dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Register</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Business</a>
-                        <a href="../Customer/customerRegister.aspx" class="dropdown-item">Customer</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Sign In</a>
-                    <div class="dropdown-menu">
-                        <a href="../Business/businessLogin.aspx" class="dropdown-item">Business</a>
-                        <a href="../Customer/customerLogin.aspx" class="dropdown-item">Customers</a>
-                    </div>
-                </li>
-                <!--https://www.youtube.com/watch?v=pkIqgB3fH70&list=PLbGui_ZYuhij_HswuaGK-ABs1vfC5HTKn&index=58-->
+               
             </ul>
 
 
@@ -80,6 +58,8 @@
                 <form id="form1" runat="server">
                     Member:
                     <asp:Label ID="txtBizID" runat="server"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log Out" Width="123px" />
                     <br />
                     <asp:DetailsView ID="DetailsView1" runat="server" Height="262px" Width="751px" AutoGenerateRows="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="event_id" DataSourceID="SqlDataSource1" ForeColor="Black">
                         <EditRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />

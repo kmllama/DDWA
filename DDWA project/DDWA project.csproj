@@ -129,7 +129,6 @@
     <Content Include="Customer\CustomerPage.aspx" />
     <Content Include="Customer\customerRegister.aspx" />
     <Content Include="detailsPage.aspx" />
-    <Content Include="detailsViewPage.aspx" />
     <Content Include="explorer.aspx" />
     <Content Include="DefaultPage.aspx" />
     <Content Include="favicon.ico" />
@@ -164,7 +163,7 @@
     <Content Include="image\restaurant.jpg" />
     <Content Include="image\searchIcon.JPG" />
     <Content Include="MainBusinessPage.aspx" />
-    <Content Include="MainBusinessPage2.aspx" />
+    <Content Include="myPage.aspx" />
     <Content Include="restaurantExplorer.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -288,13 +287,6 @@
     <Compile Include="detailsPage.aspx.designer.cs">
       <DependentUpon>detailsPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="detailsViewPage.aspx.cs">
-      <DependentUpon>detailsViewPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="detailsViewPage.aspx.designer.cs">
-      <DependentUpon>detailsViewPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="explorer.aspx.cs">
       <DependentUpon>explorer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,12 +311,12 @@
     <Compile Include="MainBusinessPage.aspx.designer.cs">
       <DependentUpon>MainBusinessPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MainBusinessPage2.aspx.cs">
-      <DependentUpon>MainBusinessPage2.aspx</DependentUpon>
+    <Compile Include="myPage.aspx.cs">
+      <DependentUpon>myPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainBusinessPage2.aspx.designer.cs">
-      <DependentUpon>MainBusinessPage2.aspx</DependentUpon>
+    <Compile Include="myPage.aspx.designer.cs">
+      <DependentUpon>myPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="restaurantExplorer.aspx.cs">

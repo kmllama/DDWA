@@ -13,5 +13,10 @@ namespace DDWA_project
         {
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("DefaultPage.aspx");
+        }
     }
 }
